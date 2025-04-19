@@ -1,0 +1,118 @@
+/* styles.css */
+:root {
+    --primary-color:#077A7D;
+    --primary-hover: #599A7D;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f4f4f9;
+    --border-color: #ccc;
+    --spacing-unit: 1rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-unit);
+    text-align: center;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 500px;
+    padding: calc(var(--spacing-unit) * 2);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+  }
+  
+  .input-group {
+    width: 100%;
+    margin-bottom: var(--spacing-unit);
+  }
+  
+  #text-input {
+    width: 100%;
+    padding: calc(var(--spacing-unit) * 0.75);
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  #text-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  
+  #check-btn {
+    width: 30%;
+    padding: calc(var(--spacing-unit) * 0.75);
+    margin-top:15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  #check-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+  }
+  
+  #check-btn:active {
+    transform: translateY(0);
+  }
+  
+  #result {
+    margin-top: var(--spacing-unit);
+    padding: calc(var(--spacing-unit) * 0.5);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  #result.is-palindrome {
+    color: var(--success-color);
+    background-color: rgba(46, 204, 113, 0.1);
+  }
+  
+  #result.is-not-palindrome {
+    color: var(--error-color);
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .container {
+      padding: var(--spacing-unit);
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
